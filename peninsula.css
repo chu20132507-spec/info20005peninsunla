@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #FFFEF5;
+}
+
+.home .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #D3EE7E;
+    padding: 15px 40px;
+}
+
+.home .logo img {
+    height: 60px;
+}
+
+.home .search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 40%;
+    border: 2px solid #EFD468;
+}
+
+.home .search i {
+    color: #BE8A42;
+    font-size: 14px;
+}
+
+.home .search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #BE8A42;
+}
+
+.home .search input::placeholder {
+    color: #BE8A42;
+}
+
+.home .order {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-family: 'Poetsen One', cursive;
+    font-size: 15px;
+    color: #7bb;
+    cursor: pointer;
+}
+
+.home .order i {
+    font-size: 16px;
+    color: #7bb;
+}
+
+.home .nav-top {
+    display: flex;
+    justify-content: center;
+    gap: 240px;
+    background: #FFA200;
+    padding: 18px;
+}
+
+.home .nav-top div {
+    font-family: 'Poetsen One', cursive;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.home .nav-top div:first-child {
+    color: #D3EE7E;
+}
+
+.home .main {
+    display: flex;
+    position: relative;
+    margin: 40px auto;
+    width: 92%;
+    max-width: 1350px;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 868px;
+    background: url("image/herodesk.jpg") center center / cover no-repeat;
+    justify-content: center;
+}
+
+.home .text {
+    position: absolute;
+    top: 90px;
+    left: 240px;
+    font-family: 'Poetsen One', cursive;
+    color: white;
+    font-size: 36px;
+    line-height: 1.4;
+}
+
+.home .quote {
+    position: absolute;
+    right: 240px;
+    top: 160px;
+    font-family: 'Poetsen One', cursive;
+    color: white;
+    font-size: 24px;
+}
+
+.home .btn {
+    display: flex;
+    position: absolute;
+    bottom: 70px;
+    background: #FFC359;
+    border: none;
+    padding: 20px 75px;
+    border-radius: 30px;
+    font-family: 'Poetsen One', cursive;
+    font-size: 64px;
+    color: white;
+}
+
+.home .nav-bottom {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .home .nav-top {
+        display: none;
+    }
+
+    .home .search {
+        width: 60%;
+    }
+
+    .home .main {
+        margin: 20px;
+        height: 420px;
+        background: url("image/heromo.png") center / cover no-repeat;
+    }
+
+    .home .text {
+        top: 50px;
+        left: 30px;
+        font-size: 26px;
+    }
+
+    .home .quote {
+        right: 30px;
+        top: 90px;
+        font-size: 14px;
+    }
+
+    .home .btn {
+        padding: 15px 40px;
+        font-size: 18px;
+    }
+
+    .home .nav-bottom {
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #D3EE7E;
+        padding: 10px;
+    }
+}
