@@ -3,13 +3,13 @@ body {
     font-family: 'Open Sans', sans-serif;
     background: #FFFEF5;
 }
-
+/*navigation*/
 .home .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 4vw;
     background: #D3EE7E;
-    padding: 15px 40px;
+    padding: 16px 4vw;
 }
 
 .home .logo img {
@@ -18,12 +18,13 @@ body {
 
 .home .search {
     display: flex;
+    flex: 1;
+    max-width: 600px;
     align-items: center;
     gap: 10px;
     background: white;
     border-radius: 30px;
     padding: 10px 20px;
-    width: 40%;
     border: 2px solid #EFD468;
 }
 
@@ -36,7 +37,6 @@ body {
     border: none;
     outline: none;
     width: 100%;
-    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     color: #BE8A42;
 }
@@ -45,132 +45,382 @@ body {
     color: #BE8A42;
 }
 
+.home .faq,
 .home .order {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     background: white;
-    padding: 12px 22px;
+    padding: 10px 20px;
     border-radius: 30px;
     font-family: 'Poetsen One', cursive;
-    font-size: 15px;
-    color: #7bb;
     cursor: pointer;
 }
 
-.home .order i {
-    font-size: 16px;
+.home .faq {
+    color: #FFA200;
+    margin-left: auto;
+}
+
+.home .order {
     color: #7bb;
 }
 
 .home .nav-top {
     display: flex;
-    justify-content: center;
-    gap: 240px;
+    justify-content: space-evenly;
     background: #FFA200;
-    padding: 18px;
+    padding: 16px;
 }
 
-.home .nav-top div {
+.home .nav-top a {
     font-family: 'Poetsen One', cursive;
     color: white;
-    font-size: 24px;
-    letter-spacing: 1px;
+    font-size: clamp(18px, 2vw, 26px);
+    text-decoration: none;
 }
 
-.home .nav-top div:first-child {
+/*heropage*/
+.home .main {
+    width: 100%;
+    height: 75vh;
+    min-height: 600px;
+    position: relative;
+    background: url("image/herofinal.png") center bottom / cover no-repeat;
+    margin-bottom: 120px;
+
+}
+
+.hero-title {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poetsen One', cursive;
+    font-size: clamp(40px, 6vw, 88px);
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0;
+    font-weight: normal;
+}
+
+.hero-words .word {
+    position: absolute;
+    font-family: 'Poetsen One', cursive;
+    font-size: clamp(16px, 1.8vw, 28px);
+}
+
+.nourish {
+    top: 12%;
+    left: 22%;
+    color: #FFA200;
+}
+
+.regenerate {
+    top: 12%;
+    right: 22%;
     color: #D3EE7E;
 }
 
-.home .main {
-    display: flex;
-    position: relative;
-    margin: 40px auto;
-    width: 92%;
-    max-width: 1350px;
-    border-radius: 30px;
-    overflow: hidden;
-    height: 868px;
-    background: url("image/herodesk.jpg") center center / cover no-repeat;
-    justify-content: center;
+.cleanse {
+    top: 44%;
+    left: 28%;
+    color: #EFD468;
 }
 
-.home .text {
-    position: absolute;
-    top: 90px;
-    left: 240px;
-    font-family: 'Poetsen One', cursive;
-    color: white;
-    font-size: 36px;
-    line-height: 1.4;
-}
-
-.home .quote {
-    position: absolute;
-    right: 240px;
-    top: 160px;
-    font-family: 'Poetsen One', cursive;
-    color: white;
-    font-size: 24px;
+.detoxify {
+    top: 44%;
+    right: 28%;
+    color: #7BC6FF;
 }
 
 .home .btn {
-    display: flex;
     position: absolute;
-    bottom: 70px;
-    background: #FFC359;
-    border: none;
-    padding: 20px 75px;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 176px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFA200;
     border-radius: 30px;
     font-family: 'Poetsen One', cursive;
-    font-size: 64px;
+    font-size: 36px;
     color: white;
+    text-decoration: none;
 }
 
-.home .nav-bottom {
-    display: none;
+/*about text section*/
+.home .about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 120px 8vw;
 }
 
-@media (max-width: 768px) {
+.home .about-text {
+    position: relative;
+    max-width: 520px;
+}
 
-    .home .nav-top {
-        display: none;
-    }
+.home .about-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #D3EE7E;
+    border-radius: 50%;
+    top: -24px;
+    left: -40px;
+    z-index: -1;
+}
 
-    .home .search {
-        width: 60%;
-    }
+.home .about-text h2 {
+    margin: 0;
+    font-family: 'Poetsen One', cursive;
+    font-size: 32px;
+    line-height: 1.4;
+    color: #FFA200;
+}
 
-    .home .main {
-        margin: 20px;
-        height: 420px;
-        background: url("image/heromo.png") center / cover no-repeat;
-    }
+.home .about-image img {
+    width: clamp(520px, 40vw, 680px);
+    height: clamp(340px, 30vw, 440px);
+    object-fit: cover;
+    border-radius: 30px;
+}
 
-    .home .text {
-        top: 50px;
-        left: 30px;
-        font-size: 26px;
-    }
+.home .about-text p {
+    margin-top: 48px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #222;
+}
 
-    .home .quote {
-        right: 30px;
-        top: 90px;
-        font-size: 14px;
-    }
+/*products display*/
+.home .products {
+    text-align: center;
+    padding: 120px 6vw;
+}
 
-    .home .btn {
-        padding: 15px 40px;
-        font-size: 18px;
-    }
+.home .products h2 {
+    font-family: 'Poetsen One', cursive;
+    color: #FFA200;
+    font-size: 48px;
+}
 
-    .home .nav-bottom {
-        display: flex;
-        justify-content: space-around;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background: #D3EE7E;
-        padding: 10px;
-    }
+.products-text {
+    max-width: 1044px;
+    margin: 48px auto 96px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-wrapper {
+  width: 900px;
+  overflow: hidden;
+}
+
+.product-track {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.product-item img {
+  width: 200px;
+  opacity: 0.5;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.product-item.active img {
+  width: 280px;
+  opacity: 1;
+  transform: translateY(-16px);
+}
+
+/* ===== FOLLOW SECTION ===== */
+.home .follow {
+    text-align: center;
+    padding: 96px 6vw;
+}
+
+.follow-intro {
+    font-family: 'Poetsen One', cursive;
+    font-size: 48px;
+    color: #FFA200;
+    margin-bottom: 48px;
+}
+
+.follow-title {
+    font-family: 'Poetsen One', cursive;
+    font-size: 32px;
+    color: #FFA200;
+    margin-bottom: 32px;
+}
+
+.follow-handle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 80px;
+    font-size: 20px;
+}
+
+.follow-handle i {
+    font-size: 24px;
+    color: #FFA200;
+}
+
+.follow-handle a {
+    color: #B18942;
+    text-decoration: none;
+}
+
+.home .gallery {
+    display: grid;
+    grid-template-columns: 280px 280px; 
+    gap: 16px; 
+    margin: 0 auto;
+    width: fit-content;
+    margin-bottom: 80px;
+}
+
+.home .gallery img {
+    object-fit: cover;
+    border-radius: 24px;
+    justify-self: center;
+}
+
+.home .gallery img:nth-child(1) {
+    height: 200px;
+    width: 280px;
+}
+
+.home .gallery img:nth-child(2) {
+    height: 170px;
+    width: 240px;
+    margin-top: 24px;
+}
+
+.home .gallery img:nth-child(3) {
+    height: 140px;
+    width: 200px;
+}
+
+.home .gallery img:nth-child(4) {
+    height: 220px;
+    width: 300px;
+}
+
+/*contact*/
+.home .contact {
+    background: #D3EE7E;
+    padding: 64px 6vw 100px;
+    position: relative;
+}
+
+.say-hello {
+    position: absolute;
+    right: 80px;
+    top: -120px;
+    width: 320px;
+}
+
+.contact-header {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 24px;
+    padding-left: 80px;
+}
+
+.contact-header h2 {
+    font-family: 'Poetsen One', cursive;
+    color: #FFA200;
+    font-size: 36px;
+}
+
+.contact-header p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contact-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    border: 2px solid #BFDFF1;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-form .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field label {
+    font-size: 16px;
+    color: #000000;
+}
+
+.contact input,
+.contact textarea {
+    border: 2px solid #EFD468;
+    background: #F8F8F8;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.contact textarea {
+    height: 200px;
+    resize: none;
+}
+
+.contact-btn {
+    display: block;
+    margin: 0 auto 32px;
+    padding: 20px 64px;
+    font-size: 24px;
+    background: #FFA200;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-family: 'Poetsen One', cursive;
+    cursor: pointer;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    font-size: 20px;
+    color: #FFA200;
 }

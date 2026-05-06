@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peninsula</title>
     <link rel="stylesheet" href="peninsula.css">
+    <script src="peninsula2.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +14,10 @@
 
 <body class="home">
 
-    <div class="header">
+    <header class="header">
 
         <div class="logo">
-            <img src="image/logo.png">
+            <img src="image/logo.png" alt="logo">
         </div>
 
         <div class="search">
@@ -24,43 +25,150 @@
             <input type="text" placeholder="Search">
         </div>
 
+        <div class="faq">F.A.Q.S</div>
+
         <div class="order">
-             <i class="fa-solid fa-receipt"></i>
-             My Order
+            <i class="fa-solid fa-receipt"></i>
+            My Order
         </div>
 
-    </div>
+    </header>
 
-    <div class="nav-top">
-        <div>HOME</div>
-        <div>SHOP</div>
-        <div>STORY</div>
-        <div>CART</div>
-    </div>
+    <nav class="nav-top">
 
-    <div class="main">
+        <a href="#">HOME</a>
+        <a href="#">SHOP</a>
+        <a href="#">STORY</a>
+        <a href="#">CART</a>
 
-        <div class="text">
-            NOURISH.<br>
-            CLEANSE.<br>
-            DETOXIFY.<br>
-            REGENERATE.
+    </nav>
+
+    <main class="main">
+
+        <div class="hero-words">
+            <p class="word nourish">NOURISH.</p>
+            <p class="word cleanse">CLEANSE.</p>
+            <p class="word detoxify">DETOXIFY.</p>
+            <p class="word regenerate">REGENERATE.</p>
         </div>
 
-        <div class="quote">
-            -- Peninsula Cold Press Juices
+        <h1 class="hero-title">Peninsula Cold Press Juices</h1>
+
+        <a href="#" class="btn">SHOP</a>
+
+    </main>
+
+    <section class="about">
+
+        <div class="about-text">
+            <div class="about-circle"></div>
+
+            <h2>
+                We are locally sourced produce.<br>
+                Using recyclable bottles.
+            </h2>
+
+            <p>
+            At PENINSULA COLD PRESS JUICE COMPANY the quality and integrity of the ingredients and
+             cold pressed method of extraction are pivotal in creating the best possible product. 
+             The driving force and distinguishing factor at PENINSULA COLD PRESS JUICE CO. is 
+             offering fresh, raw and living nutrition. Such foundational standards have been 
+             adhered to since our humble beginnings JUICING AT HOME. And we are committed to 
+             delivering the purest and freshest juice for optimal mind and body wellness.
+            </p>
+
         </div>
 
-        <button class="btn">SHOP</button>
+        <div class="about-image">
+            <img src="image/storyshot.png" alt="about image">
+        </div>
+    </section>
 
-    </div>
+    <section class="products">
 
-    <div class="nav-bottom">
-        <h2>Home</h2>
-        <div>Shop</div>
-        <div>Story</div>
-        <div>Cart</div>
-    </div>
+        <h2>PENINSULA COLD PRESS JUICE RANGE</h2>
+
+        <p class="products-text">
+        Our juices are strategically designed by blending a diverse array of plants (fruits and vegetables) 
+        to cleanse and detoxify the body at a cellular level, boosting the immune system and allowing the 
+        body to function optimally. Easily incorporate the consumption of nutritionally dense whole 
+        foods while giving the digestive system a break.
+        </p>
+
+        <div class="carousel">
+            <div class="carousel-wrapper">
+                <div class="product-track">
+                <figure class="product-item"><img src="image/Peninsula_Carrot1B-removebg-preview.png"></figure>
+                <figure class="product-item"><img src="image/Peninsula_Carrot2B-removebg-preview.png"></figure>
+                <figure class="product-item"><img src="image/Peninsula_Green1B-removebg-preview.png"></figure>
+                <figure class="product-item"><img src="image/Peninsula_Green2B-removebg-preview.png"></figure>
+                <figure class="product-item"><img src="image/Peninsula_Hydrate-removebg-preview.png"></figure>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="follow">
+        <h2 class="follow-intro">If you want to know more about us</h2>
+        <h2 class="follow-title">Follow Us</h2>
+
+        <div class="follow-handle">
+            <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/pencoldpress" target="_blank">@pencoldpress</a>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery">
+                <img src="image/peninsula-juice-14.jpg">
+                <img src="image/PENINSULA-COLD-PRESS-JUICES-STORY1.png">
+                <img src="image/peninsula-cold-press-juices2-768x535.png">
+                <img src="image/PENINSULA-COLD-PRESS-JUICES-STORY2-768x576.png">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <img src="image/sayhello.png" class="say-hello" alt="say hello">
+
+        <div class="contact-header">
+            <h2>Contact Us</h2>
+            <p>• Feel free to drop us an email anytime</p>
+        </div>
+
+        <div class="contact-card">
+            <form class="contact-form">
+
+                <div class="row">
+                    <div class="field">
+                        <label>Your name</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="field">
+                        <label>Email address</label>
+                        <input type="email">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Subject</label>
+                    <input type="text">
+                </div>
+
+                <div class="field">
+                    <label>Message</label>
+                    <textarea></textarea>
+                </div>
+            </form>
+        </div>
+
+        <button class="contact-btn">send message</button>
+
+        <div class="contact-info">
+            <p>enquiries@peninsulacoldpress.com.au</p>
+            <p>Call : 0413 556 330</p>
+        </div>
+    </section>
 
 </body>
 </html>
