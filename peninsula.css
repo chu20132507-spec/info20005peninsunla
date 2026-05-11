@@ -4,43 +4,43 @@ body {
     background: #FFFEF5;
 }
 /*navigation*/
-.home .header{
+ .header{
     display:flex;
     align-items:center;
     gap:18px;
     background:#D3EE7E;
-    padding:15px 40px;
+    padding:32px 40px;
 }
 
-.home .logo img {
+ .logo img {
     height: 60px;
 }
 
 /*search wrapper*/
-.home .search-wrapper{
+ .search-wrapper{
     position:relative;
     flex:1;
 }
 
 /*search bar*/
-.home .search-bar{
+ .search-bar{
     display:flex;
     align-items:center;
     gap:12px;
     background:white;
     border:2px solid #EFD468;
     border-radius:999px;
-    padding:10px 20px;
+    padding: 10px 16px;
     position:relative;
     z-index:10;
 }
 
-.home .search-bar i{
+ .search-bar i{
     color:#B18942;
     font-size:20px;
 }
 
-.home .search-bar input{
+ .search-bar input{
     border:none;
     outline:none;
     width:100%;
@@ -50,12 +50,12 @@ body {
     font-family:'Open Sans',sans-serif;
 }
 
-.home .search-bar input::placeholder{
+ .search-bar input::placeholder{
     color:#B18942;
 }
 
 /*dropdown*/
-.home .search-dropdown{
+ .search-dropdown{
     position:absolute;
     top:24px;
     left:0;
@@ -69,19 +69,19 @@ body {
     z-index:9;
 }
 
-.home .search-dropdown.active{
+ .search-dropdown.active{
     display:block;
 }
 
 /*recent top*/
-.home .recent-top{
+ .recent-top{
     display:flex;
     justify-content:space-between;
     align-items:center;
     margin-bottom:28px;
 }
 
-.home .recent-title{
+ .recent-title{
     display:flex;
     align-items:center;
     gap:12px;
@@ -89,24 +89,24 @@ body {
     font-size:20px;
 }
 
-.home .recent-title i{
+ .recent-title i{
     font-size:22px;
 }
 
-.home .clear-icon{
+ .clear-icon{
     color:#E8A93B;
     font-size:22px;
     cursor:pointer;
 }
 
 /*tags*/
-.home .recent-tags{
+ .recent-tags{
     display:flex;
     gap: 12px;
     flex-wrap:wrap;
 }
 
-.home .recent-tags button{
+ .recent-tags button{
     border:none;
     background:#9DCBE8;
     color:white;
@@ -118,8 +118,8 @@ body {
     box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 
-.home .faq,
-.home .order {
+ .faq,
+ .order {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -130,34 +130,34 @@ body {
     cursor: pointer;
 }
 
-.home .faq {
+ .faq {
     color: #FFA200;
     margin-left: auto;
 }
 
-.home .order {
+ .order {
     color: #7bb;
 }
 
-.home .nav-top {
+ .nav-top {
     display: flex;
     justify-content: space-evenly;
     background: #FFA200;
     padding: 16px;
 }
 
-.home .nav-top a {
+ .nav-top a {
     font-family: 'Poetsen One', cursive;
     color: white;
     font-size: clamp(18px, 2vw, 26px);
     text-decoration: none;
 }
 
-.home .nav-bottom{
+ .nav-bottom{
     display: none;
 }
 
-.home .nav-top .current{
+ .nav-top .current{
     color: #D3EE7E;
 }
 /*heropage*/
@@ -508,7 +508,7 @@ body {
 /*mobile responsive*/
 
 @media (max-width:768px){
-    .home .nav-top {
+    .nav-top {
         display: none;
     }
     /*overall*/
@@ -518,7 +518,7 @@ body {
 
         /*header*/
 
-    .home .header{
+    .header{
         display:flex;
         flex-wrap:wrap;
         align-items:center;
@@ -526,96 +526,84 @@ body {
         padding:18px 20px;
     }
 
-    .home .logo{
+    .logo{
         width:100%;
         text-align:center;
     }
 
-    .home .logo img{
+    .logo img{
         height:54px;
     }
 
     /*faq row*/
 
-    .home .faq{
+    .faq{
         order:2;
         margin-left:0;
     }
 
-    .home .order{
+    .order{
         order:3;
         margin-left:auto;
     }
 
-    .home .faq,
-    .home .order{
+    .faq,
+    .order{
         padding:10px 18px;
         font-size:14px;
     }
 
     /*search*/
-    .home .search-wrapper{
+    .search-wrapper{
         order:4;
         flex:0 0 100%;
         width:100%;
     }
 
-    .home .search-bar{
+    .search-bar{
         padding:8px 16px;
     }
 
-    .home .search-bar i{
+    .search-bar i{
         font-size:16px;
     }
 
-    .home .search-bar input{
+    .search-bar input{
         font-size:12px;
     }
 
     /*recent search dropdown*/
 
-    .home .search-dropdown{
+    .search-dropdown{
         top:24px;
         padding:22px 20px 20px;
     }
 
-    .home .recent-top{
+    .recent-top{
         margin-bottom:18px;
     }
 
-    .home .recent-title{
+    .recent-title{
         gap:8px;
         font-size:14px;
     }
 
-    .home .recent-title i{
+    .recent-title i{
         top: 16px;
         font-size:16px;
     }
 
-    .home .clear-icon{
+    .clear-icon{
         font-size:16px;
     }
 
-    .home .recent-tags{
+    .recent-tags{
         gap:10px;
     }
 
-    .home .recent-tags button{
+    .recent-tags button{
         padding:8px 14px;
         font-size:12px;
-    }
-
-    /*navigation*/
-
-    .home .nav-top{
-        padding:14px 10px;
-        gap:12px;
-        flex-wrap:wrap;
-    }
-
-    .home .nav-top a{
-        font-size:16px;
     }
 
     /*hero section*/
@@ -857,7 +845,7 @@ body {
     
     
     /*bottom tab bar*/
-    .home .nav-bottom{
+     .nav-bottom{
         display:flex;
         justify-content:space-around;
         align-items:center;
@@ -873,7 +861,7 @@ body {
         box-shadow:0 8px 24px rgba(0,0,0,0.12);
     }
 
-    .home .nav-bottom a{
+     .nav-bottom a{
         display:flex;
         flex-direction:column;
         align-items:center;
@@ -891,25 +879,172 @@ body {
         transition:0.2s;
     }
 
-    .home .nav-bottom a i{
+     .nav-bottom a i{
         font-size:20px;
     }
 
-    .home .nav-bottom a span{
+     .nav-bottom a span{
         font-size:10px;
         font-weight:700;
         letter-spacing:0.5px;
     }
 
     /*active tab*/
-    .home .nav-bottom a.active{
+     .nav-bottom a.active{
         background:#9dcbe8;
         color:white;
     }
 
-    .home .nav-bottom a.active i,
-    .home .nav-bottom a.active span{
+     .nav-bottom a.active i,
+     .nav-bottom a.active span{
         color:white;
+    }
+}
+
+/*--------------------------------shop-----------------------------------*/
+/*heading*/
+.shop .shop-heading{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:32px;
+}
+
+.shop .shop-main{
+    width:100%;
+    max-width:1240px;
+    margin:0 auto;
+    padding:52px 0 128px;
+}
+
+.shop .shop-heading h1{
+    margin:0;
+    color:#FFA200;
+    font-size:32px;
+    font-family:'Poetsen One',cursive;
+}
+
+.shop .back-btn{
+    position:absolute;
+    left:0;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    color:#F0B348;
+    font-size:20px;
+}
+
+/*categories*/
+.shop .category{
+    margin-bottom:24px;
+}
+
+/*category text*/
+.shop .category p{
+    margin:0;
+    padding:12px 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    border:1px solid #EFD468;
+    border-radius:30px;
+    background:white;
+    color:#A39046;
+    font-size:16px;
+    font-weight:700;
+}
+
+/*category icon*/
+.shop .category i{
+    color:#FFA200;
+    font-size:14px;
+}
+
+/*sort bar*/
+.shop .sort-bar{
+    display:flex;
+    margin-bottom:40px;
+    border:1px solid #A2D7EC;
+    border-radius:30px;
+    overflow:hidden;
+    background:white;
+}
+
+/*sort button*/
+.shop .sort-btn{
+    flex:1;
+    margin:0;
+    padding:12px 0;
+    border:none;
+    border-right:1px solid #A2D7EC;
+    background:white;
+    color:#3D9BC0;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/*remove last line*/
+.shop .sort-btn:last-child{
+    border-right:none;
+}
+
+/*active*/
+.shop .sort-btn.active{
+    background:#A2D7EC;
+    color:white;
+}
+/*mobile*/
+@media (max-width:768px){
+
+    /*shop main*/
+    .shop .shop-main{
+        width:100%;
+        max-width:none;
+        padding:40px 20px 120px;
+        box-sizing:border-box;
+    }
+
+    /*heading*/
+    .shop .shop-heading{
+        margin-bottom:24px;
+    }
+
+    .shop .shop-heading h1{
+        font-size:24px;
+    }
+
+    .shop .back-btn{
+        font-size:16px;
+        gap:4px;
+    }
+
+    /*category*/
+    .shop .category{
+        margin-bottom:16px;
+    }
+
+    .shop .category p{
+        padding:8px 0;
+        font-size:12px;
+        border-radius:30px;
+    }
+
+    /*sort bar*/
+    .shop .sort-bar{
+        margin-bottom:32px;
+        border-radius:30px;
+    }
+
+    /*sort button*/
+    .shop .sort-btn{
+        flex:1;
+        padding:8px 0;
+        font-size:12px;
+        font-weight: 100;
     }
 
 }
