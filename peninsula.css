@@ -997,6 +997,89 @@ body {
     background:#A2D7EC;
     color:white;
 }
+
+/*-------------------cleanse--------------------------*/
+/*cleanse title*/
+.shop .cleanse-title{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:64px;
+    margin:0 0 40px;
+    padding:0 24px;
+    background:#FFA200;
+    color:white;
+    font-size:32px;
+    font-weight:700;
+    font-family:'Poetsen One',cursive;
+}
+
+/*cleanse product grid*/
+.shop .product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,280px);
+    justify-content:center;
+    gap:120px;
+    margin-bottom:80px;
+}
+
+/*cleanse product card*/
+.shop .product-card{
+    position: relative;
+    margin: 0;
+    padding: 24px;
+    background:white;
+    border-radius:30px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.08);
+    overflow:hidden;
+}
+
+/*cleanse image*/
+.shop .product-card img{
+    width:100%;
+    height:320px;
+    object-fit:contain;
+    display:block;
+    margin-bottom:20px;
+}
+
+/*text*/
+.shop figcaption h3{
+    margin:0 0 16px;
+    color:black;
+    font-size:16px;
+    font-weight:400;
+    font-family:'Poetsen One', cursive;
+}
+
+/*price and rating*/
+.shop .product-bottom{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:64px;
+    padding-top:20px;
+    border-top:1px solid #9DCBE8;
+}
+
+/*price*/
+.shop .product-bottom p{
+    margin:0;
+    color:#303030;
+    font-size:16px;
+}
+
+/*rating*/
+.shop .rating{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    color:#F0B348;
+    font-size:12px;
+}
+
+
+
 /*mobile*/
 @media (max-width:768px){
 

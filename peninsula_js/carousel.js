@@ -1,4 +1,4 @@
-    window.onload = function () {
+window.addEventListener("load", function (){
 
         /*carousel*/
         /*prepare*/
@@ -45,20 +45,4 @@
         updateCarousel();
         setInterval(slide, 2000);
 
-        /*search dropdown*/
-        const searchBar = document.getElementById("searchBar");
-        const searchDropdown = document.getElementById("searchDropdown");
-
-        searchBar.addEventListener("click", function(event){
-            event.stopPropagation();
-            searchDropdown.classList.toggle("active");
-        });
-
-        searchDropdown.addEventListener("click", function(event){
-            event.stopPropagation();
-        });
-
-        window.addEventListener("click", function(){
-            searchDropdown.classList.remove("active");
-        });
-    };
+});
