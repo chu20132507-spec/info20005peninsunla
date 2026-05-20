@@ -6,6 +6,9 @@
     <title>peninsula_shop</title>
     <link rel="stylesheet" href="../style/peninsula.css">
     <script src="../peninsula_js/search_dropdown.js"></script>
+    <script src="../peninsula_js/filter.js"></script>
+    <script src="../peninsula_js/category.js"></script>
+    <script src="../peninsula_js/search.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +26,10 @@
     <!--search bar-->
     <div class="search-bar" id="searchBar">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search" id="searchInput">
+        <button id="searchBtn">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
     </div>
 
     <!--search interaction-->
@@ -52,14 +58,14 @@
 
     <!--navigation bar-->
     <nav class="nav-top">
-        <a href="index.html" class="current">HOME</a>
-        <a href="shop.html">SHOP</a>
+        <a href="index.html">HOME</a>
+        <a href="shop.html" class="current">SHOP</a>
         <a href="#">STORY</a>
         <a href="cart.html">CART</a>
     </nav>
 
     <main class="shop-main">
-
+        <p id="resultText"></p>
         <!--title-->
         <section class="shop-heading">
             <a href="index.html" class="back-btn">
@@ -70,40 +76,37 @@
         </section>
 
         <!--categories filter-->
-        <section class="category">
-            <p> 
-                <i class="fa-solid fa-sliders"></i>
-                All Products
-            </p>
-        </section>
+        <section class="category-wrapper">
+            <section class="category" id="categoryBtn">
+                <p> 
+                    <i class="fa-solid fa-sliders"></i>
+                    All Products
+                </p>
+            </section>
+            <section class="category-dropdown" id="categoryDropdown">
+                <button data-filter="all">All Products</button>
+                <button data-filter="juice">Juice</button>
+                <button data-filter="cleanse">Cleanse Range</button>
+                <button data-filter="retail">Retail Range</button>
+            </section>
+        </section> 
 
         <!--sort-->
         <nav class="sort-bar">
-            <button class="sort-btn active">
-                Featured
-            </button>
-
-            <button class="sort-btn">
-                Lowest
-            </button>
-
-            <button class="sort-btn">
-                Highest
-            </button>
-
-            <button class="sort-btn">
-                Newest
-            </button>
+            <button class="sort-btn active">Featured</button>
+            <button class="sort-btn">Lowest</button>
+            <button class="sort-btn">Highest</button>
+            <button class="sort-btn">Newest</button>
         </nav>
 
         <!--cleanse-->
-        <section class="product-section">
+        <section class="product-section" id="cleanseSection">
             <h2 class="cleanse-title">
                 CLEANSE RANGE
             </h2>
 
             <section class="product-grid">
-                <figure class="product-card">
+                <figure class="product-card" data-price="65">
                     <img src="../image/Peninsula_Cleanse1.jpg" alt="Cleanse Juice1">
                     <figcaption>
                         <h3>CLEANSE #1</h3>
@@ -117,7 +120,7 @@
                     </figcaption>
                 </figure>
 
-                <figure class="product-card">
+                <figure class="product-card" data-price="65">
                     <img src="../image/Peninsula_Cleanse2.jpg" alt="Cleanse Juice2">
                     <figcaption>
                         <h3>CLEANSE #2</h3>
@@ -131,7 +134,7 @@
                     </figcaption>
                 </figure>
 
-                <figure class="product-card">
+                <figure class="product-card" data-price="65">
                     <img src="../image/Peninsula_Cleanse3.jpg" alt="Cleanse Juice3">
                     <figcaption>
                         <h3>CLEANSE #3</h3>
@@ -148,13 +151,13 @@
         </section>
     
         <!--juice-->
-        <section class="product-section">
+        <section class="product-section" id="juiceSection">
             <h2 class="juice-title">
                 JUICE
             </h2>
             <section class="product-grid">
                 <!--product-->
-                <figure class="product-card">
+                <figure class="product-card" data-price="8">
                     <img src="../image/Peninsula_Carrot1B-removebg-preview.png" alt="Carrot Juice">
                     <figcaption>
                         <h3>CARROT #1</h3>
@@ -169,7 +172,7 @@
                 </figure>
 
                 <!--product-->
-                <figure class="product-card">
+                <figure class="product-card" data-price="8">
                     <img src="../image/Peninsula_Carrot2B-removebg-preview.png" alt="Carrot Juice">
                     <figcaption>
                         <h3>CARROT #2</h3>
@@ -184,7 +187,7 @@
                 </figure>
 
                 <!--sold out-->
-                <figure class="product-card sold-out">
+                <figure class="product-card sold-out" data-price="8">
                     <p class="sold-label">
                         SOLD OUT
                     </p>
@@ -203,11 +206,11 @@
             </section>
         </section>
         <!--retail-->
-        <section class="product-section">
+        <section class="product-section" id="retailSection">
             <h2 class="retail-title">RETAIL RANGE</h2>
             <section class="product-grid">
                 <!--product-->
-                <figure class="product-card">
+                <figure class="product-card" data-price="8">
                     <img src="../image/Peninsula_BlackLemonade.jpg" alt="BLK Lemonade">
                     <figcaption>
                         <h3>BLK LEMONADE</h3>
@@ -222,7 +225,7 @@
                 </figure>
 
                 <!--product-->
-                <figure class="product-card">
+                <figure class="product-card" data-price="8">
                     <img src="../image/Peninsula_BeetB.jpg" alt="Peninsula_BeetB">
                     <figcaption>
                         <h3>BEET</h3>

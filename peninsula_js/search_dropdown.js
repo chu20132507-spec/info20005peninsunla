@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-/*search dropdown*/
+    //search dropdown
     const searchBar = document.getElementById("searchBar");
     const searchDropdown = document.getElementById("searchDropdown");
 
