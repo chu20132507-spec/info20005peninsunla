@@ -52,8 +52,10 @@ window.addEventListener("load", function(){
     //click search button
     if(searchBtn && searchInput){
         searchBtn.addEventListener("click", function(){
-            const keyword = searchInput.value;
-            searchProducts(keyword);
+
+            const keyword = searchInput.value.trim();
+
+            window.location.href = "shop.html?search=" + keyword;
         });
     }
 

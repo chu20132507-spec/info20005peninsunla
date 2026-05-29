@@ -9,6 +9,9 @@
     <script src="../peninsula_js/filter.js"></script>
     <script src="../peninsula_js/category.js"></script>
     <script src="../peninsula_js/search.js"></script>
+    <script src="../peninsula_js/detail_product_data.js "></script>
+    <script src="../peninsula_js/detail.js"></script>
+    <script src="../peninsula_js/add_cart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,7 +64,10 @@
         <a href="index.html">HOME</a>
         <a href="shop.html" class="current">SHOP</a>
         <a href="#">STORY</a>
-        <a href="cart.html">CART</a>
+        <a href="cart.html" class="cart-link">
+            CART
+            <span id="cartBadge" class="cart-badge">0</span>
+        </a>
     </nav>
 
     <main class="shop-main">
@@ -106,7 +112,7 @@
             </h2>
 
             <section class="product-grid">
-                <figure class="product-card" data-price="65">
+                <figure class="product-card" data-price="65" onclick="window.location.href='detail.html?product=cleanse1'">
                     <img src="../image/Peninsula_Cleanse1.jpg" alt="Cleanse Juice1">
                     <figcaption>
                         <h3>CLEANSE #1</h3>
@@ -114,13 +120,13 @@
                             <p>$65.00</p>
                             <p class="rating">
                                 <i class="fa-solid fa-star"></i>
-                                4.7
+                                2.5
                             </p>
                         </section>
                     </figcaption>
                 </figure>
 
-                <figure class="product-card" data-price="65">
+                <figure class="product-card" data-price="65" onclick="window.location.href='detail.html?product=cleanse2'">
                     <img src="../image/Peninsula_Cleanse2.jpg" alt="Cleanse Juice2">
                     <figcaption>
                         <h3>CLEANSE #2</h3>
@@ -128,21 +134,19 @@
                             <p>$65.00</p>
                             <p class="rating">
                                 <i class="fa-solid fa-star"></i>
-                                4.8
+                                3.0
                             </p>
                         </section>
                     </figcaption>
                 </figure>
 
-                <figure class="product-card" data-price="65">
+                <figure class="product-card" data-price="65" onclick="window.location.href='detail.html?product=cleanse3'">
                     <img src="../image/Peninsula_Cleanse3.jpg" alt="Cleanse Juice3">
                     <figcaption>
                         <h3>CLEANSE #3</h3>
                         <section class="product-bottom">
                             <p>$65.00</p>
                             <p class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                4.8
                             </p>
                         </section>
                     </figcaption>
@@ -157,7 +161,8 @@
             </h2>
             <section class="product-grid">
                 <!--product-->
-                <figure class="product-card" data-price="8">
+                
+                <figure class="product-card" data-price="8" onclick="window.location.href='detail.html?product=carrot1'">
                     <img src="../image/Peninsula_Carrot1B-removebg-preview.png" alt="Carrot Juice">
                     <figcaption>
                         <h3>CARROT #1</h3>
@@ -165,14 +170,14 @@
                             <p>$8.50</p>
                             <p class="rating">
                                 <i class="fa-solid fa-star"></i>
-                                5.0
+                                1.0
                             </p>
                         </section>
                     </figcaption>
                 </figure>
-
+                
                 <!--product-->
-                <figure class="product-card" data-price="8">
+                <figure class="product-card" data-price="8" onclick="window.location.href='detail.html?product=carrot2'">
                     <img src="../image/Peninsula_Carrot2B-removebg-preview.png" alt="Carrot Juice">
                     <figcaption>
                         <h3>CARROT #2</h3>
@@ -180,14 +185,14 @@
                             <p>$8.50</p>
                             <p class="rating">
                                 <i class="fa-solid fa-star"></i>
-                                5.0
+                                3.0
                             </p>
                         </section>
                     </figcaption>
                 </figure>
 
                 <!--sold out-->
-                <figure class="product-card sold-out" data-price="8">
+                <figure class="product-card sold-out" data-price="8" onclick="window.location.href='detail.html?product=hydrate'">
                     <p class="sold-label">
                         SOLD OUT
                     </p>
@@ -198,7 +203,7 @@
                             <p>$8.50</p>
                             <p class="rating">
                                 <i class="fa-solid fa-star"></i>
-                                4.6
+                                3.0
                             </p>
                         </section>
                     </figcaption>
@@ -210,7 +215,7 @@
             <h2 class="retail-title">RETAIL RANGE</h2>
             <section class="product-grid">
                 <!--product-->
-                <figure class="product-card" data-price="8">
+                <figure class="product-card" data-price="8" onclick="window.location.href='detail.html?product=blackLemonade'">
                     <img src="../image/Peninsula_BlackLemonade.jpg" alt="BLK Lemonade">
                     <figcaption>
                         <h3>BLK LEMONADE</h3>
@@ -218,22 +223,20 @@
                             <p>$8.50</p>
                             <p class="rating">
                                 <i class="fa-solid fa-star"></i>
-                                4.9
+                                2.0
                             </p>
                         </section>
                     </figcaption>
                 </figure>
 
                 <!--product-->
-                <figure class="product-card" data-price="8">
+                <figure class="product-card" data-price="8" onclick="window.location.href='detail.html?product=beet'">
                     <img src="../image/Peninsula_BeetB.jpg" alt="Peninsula_BeetB">
                     <figcaption>
                         <h3>BEET</h3>
                         <section class="product-bottom">
                             <p>$8.50</p>
                             <p class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                4.8
                             </p>
                         </section>
                     </figcaption>
@@ -261,9 +264,16 @@
             <span>STORY</span>
         </a>
 
-        <a href="#">
-             <i class="fa-solid fa-cart-shopping"></i>
+        <a href="cart.html" class="mobile-cart">
+
+            <div class="mobile-cart-wrapper">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span id="mobileCartBadge" class="mobile-cart-badge"> 0 </span>
+            </div>
             <span>CART</span>
+
         </a>
     </div>
 </body>

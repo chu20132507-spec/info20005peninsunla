@@ -8,6 +8,9 @@
     <script src="../peninsula_js/carousel.js"></script>
     <script src="../peninsula_js/search_dropdown.js"></script>
     <script src="../peninsula_js/search.js"></script>
+    <script src="../peninsula_js/detail_product_data.js "></script>
+    <script src="../peninsula_js/detail.js"></script>
+    <script src="../peninsula_js/add_cart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,7 +67,10 @@
         <a href="index.html" class="current">HOME</a>
         <a href="shop.html">SHOP</a>
         <a href="#">STORY</a>
-        <a href="cart.html">CART</a>
+        <a href="cart.html" class="cart-link">
+            CART
+            <span id="cartBadge" class="cart-badge">0</span>
+        </a>
 
     </nav>
 
@@ -223,9 +229,16 @@
             <span>STORY</span>
         </a>
 
-        <a href="cart.html">
-             <i class="fa-solid fa-cart-shopping"></i>
+        <a href="cart.html" class="mobile-cart">
+
+            <div class="mobile-cart-wrapper">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span id="mobileCartBadge" class="mobile-cart-badge"> 0 </span>
+            </div>
             <span>CART</span>
+
         </a>
     </div>
 

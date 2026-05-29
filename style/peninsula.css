@@ -1113,6 +1113,7 @@ body {
 }
 
 /*cleanse image*/
+
 .shop .product-card img{
     width:100%;
     height:20rem;
@@ -1290,4 +1291,493 @@ body {
         height:11.25rem;
     }
 
+}
+
+
+/*--------------------------------detail-----------------------------------*/
+
+/*main*/
+.detail .detail-main{
+    width:100%;
+    max-width:77.5rem;
+    margin:0 auto;
+    padding:3.25rem 0 8rem;
+}
+
+/*back button*/
+.detail .detail-heading{
+    margin-bottom:2rem;
+}
+
+.detail .back-btn{
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+    text-decoration:none;
+    color:#F0B348;
+    font-size:1.25rem;
+}
+
+.detail .back-btn:hover{
+    transform:translateX(-0.375rem);
+    color:#FFA200;
+}
+
+/*----------------product section----------------*/
+
+.detail .detail-product{
+    display:grid;
+    grid-template-columns:26rem 1fr;
+    gap:4rem;
+    align-items:center;
+    margin-bottom:4rem;
+}
+
+/*image card*/
+.detail .detail-image-card{
+    background:white;
+    border-radius:1.875rem;
+    padding:2rem;
+    box-shadow:0 0.25rem 0.75rem rgba(0,0,0,0.08);
+}
+
+.detail .detail-image{
+    width:100%;
+    height:28rem;
+    object-fit:contain;
+}
+
+/*top section*/
+.detail .detail-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:1.5rem;
+}
+
+.detail .detail-top h1{
+    margin:0;
+    font-size:2rem;
+    font-family:'Poetsen One',cursive;
+    font-weight:400;
+    color:black;
+}
+
+/*rating*/
+.detail .detail-rating{
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+    color:#303030;
+    font-size:1.125rem;
+}
+
+.detail .detail-rating i{
+    color:#F0B348;
+}
+
+/*price*/
+.detail .detail-price{
+    margin:0 0 2rem;
+    color:#FFA200;
+    font-size:2.5rem;
+    font-family:'Poetsen One',cursive;
+}
+
+/*description*/
+.detail .detail-description{
+    margin-bottom:2rem;
+}
+
+.detail .detail-description p{
+    margin:0 0 1rem;
+    font-size:1rem;
+    line-height:1.8;
+    color:#222;
+}
+
+/*delivery*/
+.detail .delivery-note{
+    margin-top:2rem;
+}
+
+.detail .delivery-note i{
+    color:#A2D7EC;
+    margin-right:0.5rem;
+}
+
+/*cart section*/
+.detail .detail-cart{
+    display:flex;
+    gap:1.5rem;
+    align-items:center;
+    background:#D3EE7E;
+    padding:1rem;
+    border-radius:1.875rem;
+}
+
+/*quantity*/
+.detail .quantity-box{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:11rem;
+    padding:0.75rem 1rem;
+    background:#A2D7EC;
+    border-radius:1.875rem;
+}
+
+.detail .quantity-box button{
+    width:2rem;
+    height:2rem;
+    border:none;
+    background:transparent;
+    color:white;
+    cursor:pointer;
+    font-size:1.25rem;
+}
+
+.detail #quantityValue{
+    color:white;
+    font-size:1rem;
+    font-weight:700;
+}
+
+/*add to cart*/
+.detail .add-cart-btn{
+    flex:1;
+    border:none;
+    background:#FFA200;
+    color:white;
+    border-radius:1.875rem;
+    padding:1rem;
+    font-size:1.125rem;
+    font-family:'Poetsen One',cursive;
+    cursor:pointer;
+}
+
+.detail .add-cart-btn:hover{
+    background:#ffb22e;
+}
+
+/*----------------introduction----------------*/
+
+.detail .intro-section{
+    margin-bottom:3rem;
+}
+
+.detail .intro-section h2{
+    margin:0 0 1rem;
+    font-size:2rem;
+    font-family:'Poetsen One',cursive;
+    font-weight:400;
+    color:black;
+}
+
+.detail .intro-section p{
+    line-height:1.8;
+    font-size:1rem;
+    color:#222;
+}
+
+/*----------------reviews----------------*/
+
+.detail .review-section{
+    margin-bottom:5rem;
+}
+
+.detail .review-section h2{
+    margin:0 0 2rem;
+    padding:1rem;
+    text-align:center;
+    background:#A2D7EC;
+    color:white;
+    font-size:1.5rem;
+    font-family:'Poetsen One',cursive;
+    font-weight:400;
+}
+
+.detail .review-card{
+    background:white;
+    padding:2rem;
+    border-radius:1.5rem;
+    box-shadow:0 0.25rem 0.75rem rgba(0,0,0,0.06);
+    margin-bottom:1.5rem;
+}
+
+.detail .review-stars{
+    color:#F0B348;
+    font-size:1.1rem;
+    margin-bottom:1rem;
+}
+
+.detail .review-text{
+    margin:0 0 1rem;
+    color:#222;
+    line-height:1.8;
+}
+
+.detail .review-user{
+    margin:0;
+    color:#777;
+    font-size:0.9rem;
+}
+
+/*see more*/
+.detail .see-more{
+    margin-top:1rem;
+    text-align:center;
+    color:#FFA200;
+    font-weight:700;
+    font-size:1rem;
+}
+
+/*----------------recommend----------------*/
+
+.detail .recommend-section h2{
+    margin:0 0 2.5rem;
+    padding:1rem;
+    text-align:center;
+    background:#FFA200;
+    color:white;
+    font-size:1.5rem;
+    font-family:'Poetsen One',cursive;
+    font-weight:400;
+}
+
+/*recommend grid*/
+.detail .recommend-grid{
+    display:grid;
+    grid-template-columns:repeat(3,17.5rem);
+    justify-content:center;
+    gap:7.5rem;
+}
+
+/*product card*/
+.detail .product-card{
+    cursor:pointer;
+    position:relative;
+    margin:0;
+    padding:1.5rem;
+    background:white;
+    border-radius:1.875rem;
+    box-shadow:0 0.25rem 0.5rem rgba(0,0,0,0.08);
+    overflow:hidden;
+}
+
+.detail .product-card:hover{
+    transform:translateY(-0.5rem);
+    box-shadow:0 0.75rem 2rem rgba(0,0,0,0.12);
+}
+
+/*image*/
+.detail .product-card img{
+    width:100%;
+    height:20rem;
+    object-fit:contain;
+    display:block;
+    margin-bottom:1.25rem;
+}
+
+/*title*/
+.detail figcaption h3{
+    margin:0 0 1rem;
+    padding-top:1.25rem;
+    border-top:0.0625rem solid #9DCBE8;
+    color:black;
+    font-size:1rem;
+    font-weight:400;
+    font-family:'Poetsen One',cursive;
+}
+
+/*bottom*/
+.detail .product-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.detail .product-bottom p{
+    margin:0;
+    color:#303030;
+    font-size:1rem;
+}
+
+.detail .rating{
+    display:flex;
+    align-items:center;
+    gap:0.375rem;
+}
+
+.detail .rating i{
+    color:#F0B348;
+}
+
+/*----------------mobile----------------*/
+@media (max-width:390px){
+    .detail{
+        padding-left:0;
+        padding-right:0;
+    }
+
+    .detail .detail-main{
+        padding:0 30px 7.5rem;
+        box-sizing:border-box;
+    }
+
+    .detail .back-btn{
+        margin-top:24px;
+    }
+
+    .detail .detail-product{
+        grid-template-columns:1fr;
+        gap:2rem;
+        margin-bottom:3rem;
+    }
+
+    .detail .detail-image-card{
+        padding:1.5rem;
+    }
+
+    .detail .detail-image{
+        height:18rem;
+    }
+
+    .detail .detail-top{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0.75rem;
+    }
+
+    .detail .detail-top h1{
+        font-size:1.5rem;
+    }
+
+    .detail .detail-price{
+        font-size:2rem;
+        margin-bottom:1.5rem;
+    }
+
+    /* Cart Section */
+    .detail .detail-cart{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        gap:1rem;
+    }
+
+    .detail .quantity-box{
+        flex:1;
+        height:56px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        box-sizing:border-box;
+    }
+
+    .detail .add-cart-btn{
+        flex:1;
+        height:56px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    /* Section Titles */
+    .detail .intro-section h2,
+    .detail .review-section h2,
+    .detail .recommend-section h2{
+        font-size:1.2rem;
+    }
+
+    /* Reviews */
+    .detail .review-card{
+        padding:1.5rem;
+    }
+
+    /* Recommendations */
+    .detail .recommend-grid{
+        grid-template-columns:1fr 1fr;
+        gap:1.5rem;
+    }
+
+    .detail .product-card{
+        padding:1rem;
+    }
+
+    .detail .product-card img{
+        height:11rem;
+    }
+
+    /* Success Message */
+    .cart-message{
+        font-size:0.75rem;
+        white-space:nowrap;
+        max-width:90%;
+    }
+}
+/* -------------------------Add To Cart / Cart Badge--------------------- */
+
+.cart-link{
+    position:relative;
+}
+
+.cart-badge{
+    position:absolute;
+    top:-14px;
+    right:-16px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#ff6b6b;
+    color:white;
+    font-size:12px;
+    font-weight:700;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.mobile-cart-wrapper{
+    position:relative;
+}
+
+.mobile-cart-badge{
+    position:absolute;
+    top:-18px;
+    right:-14px;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#ff6b6b;
+    color:white;
+    font-size:10px;
+    font-weight:700;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.cart-message{
+    position:fixed;
+    top:120px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#f5a300;
+    color:white;
+    font-weight:700;
+    padding:15px 30px;
+    border-radius:12px;
+    z-index:9999;
+    display:none;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px){
+    .cart-message{
+        font-size: 0.8rem;
+        white-space: nowrap;
+        max-width: 90%;
+
+    }
 }
