@@ -1,4 +1,4 @@
-//wait until the webpage has fully loaded
+//wait
 window.addEventListener("load", function () {
 
     //get the current cart count from localStorage
@@ -15,12 +15,12 @@ window.addEventListener("load", function () {
     //find the cart badge on mobile view
     const mobileCartBadge = document.getElementById("mobileCartBadge");
 
-    //if the desktop cart badge exists, display the cart count
+    //desktop cart badge exists display the cart count
     if (cartBadge) {
         cartBadge.textContent = cartCount;
     }
 
-    //if the mobile cart badge exists, display the cart count
+    //mobile cart badge exists display the cart count
     if (mobileCartBadge) {
         mobileCartBadge.textContent = cartCount;
     }

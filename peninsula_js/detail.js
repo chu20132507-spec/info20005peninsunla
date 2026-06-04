@@ -1,15 +1,16 @@
+//wait
 window.addEventListener("load", function (){
-
+    //url parameter
     const params = new URLSearchParams(window.location.search);
     const productId = params.get("product");
 
     const product = products[productId];
-
+    //invalid product
     if (!product) {
         console.log("Product not found");
         return;
     }
-
+    //product details
     document.getElementById("detailName").textContent = product.name;
     document.getElementById("detailPrice").textContent = product.price;
     const ratingBox = document.querySelector(".detail-rating");
@@ -34,9 +35,8 @@ window.addEventListener("load", function (){
     else {
         seeMoreBtn.style.display = "block";
     }
-
+    //reviews section
     const reviewContainer = document.getElementById("reviewContainer");
-
     reviewContainer.innerHTML = "";
 
     if (product.reviews.length === 0) {
@@ -85,9 +85,8 @@ window.addEventListener("load", function (){
         });
 
     }
-
+    //recommended products
     const recommendContainer = document.getElementById("recommendContainer");
-
     recommendContainer.innerHTML = "";
 
     product.recommendations.forEach(function(id){
@@ -123,50 +122,54 @@ window.addEventListener("load", function (){
         '</figure>';
 
     });
-
+    //quantity controls
     const quantityValue = document.getElementById("quantityValue");
-
     let quantity = 1;
 
     updateQuantity();
     updateCartBadge();
-
+    //add to cart
     const addCartBtn = document.getElementById("addCartBtn");
 
-    addCartBtn.addEventListener("click", function (){
+    addCartBtn.addEventListener("click", function(){
 
-        let cartCount = localStorage.getItem("cartCount");
+        let cartItems = localStorage.getItem("cartItems");
 
-        if (cartCount === null) {
-            cartCount = 0;
+        if (cartItems === null || cartItems === "") {
+            cartItems = [];
+        }
+        else {
+            cartItems = cartItems.split(",");
+            cartItems = cartItems.filter(function(id){
+                return id !== "";
+            });
         }
 
-        cartCount = Number(cartCount) + quantity;
+        for (let i = 0; i < quantity; i++) {
+            cartItems.push(productId);
+        }
 
-        localStorage.setItem("cartCount", cartCount);
+        localStorage.setItem(
+            "cartItems",
+            cartItems.join(",")
+        );
 
         updateCartBadge();
 
         const cartMessage = document.getElementById("cartMessage");
-
-        cartMessage.textContent =
-            '✓ "' + product.name + '" added to cart';
-
+        cartMessage.textContent = '✓ "' + product.name + '" added to cart';
         cartMessage.style.display = "block";
 
         setTimeout(function(){
-
             cartMessage.style.display = "none";
-
         }, 2000);
 
     });
 
+    //quantity display
     document.getElementById("quantityPlus").addEventListener("click", function (){
-
         quantity++;
         updateQuantity();
-
     });
 
     document.getElementById("quantityMinus").addEventListener("click", function (){
@@ -194,22 +197,33 @@ window.addEventListener("load", function (){
         }
 
     }
-
+    //cart badge
     function updateCartBadge() {
-        let cartCount = localStorage.getItem("cartCount");
-        if (cartCount === null) {
-            cartCount = 0;
-        }
 
+        let cartItems = localStorage.getItem("cartItems");
+        let count = 0;
+
+        if (cartItems !== null && cartItems !== "") {
+
+            cartItems = cartItems.split(",");
+            cartItems.forEach(function(id){
+
+                if (id !== "") {
+                    count++;
+                }
+
+            });
+
+        }
         const cartBadge = document.getElementById("cartBadge");
-        const mobileCartBadge = document.getElementById("mobileCartBadge");
 
         if (cartBadge) {
-            cartBadge.textContent = cartCount;
+            cartBadge.textContent = count;
         }
+        const mobileCartBadge = document.getElementById("mobileCartBadge");
 
         if (mobileCartBadge) {
-            mobileCartBadge.textContent = cartCount;
+            mobileCartBadge.textContent = count;
         }
 
     }
