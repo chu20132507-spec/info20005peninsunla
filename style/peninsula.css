@@ -1928,13 +1928,13 @@ body {
     padding:3rem;
     background:#FFFFFF;
     border:0.0625rem solid #F2F2F2;
-    border-radius:1.875rem;
     box-sizing:border-box;
 }
 
 .cart .cart-summary h2{
+    font-family:'Poetsen One', cursive;
     margin:0 0 2rem;
-    color:black;
+    color: #FFA200;
     font-size:1.5rem;
     font-weight:600;
 }
@@ -2105,4 +2105,559 @@ body {
     .cart .cart-select i{
         font-size:0.7rem;
     }
+}
+
+
+/*----------------delivery----------------*/
+.order-summary h2{
+    font-family:'Poetsen One', cursive;
+    font-weight:400;
+    font-size:2rem;
+    color: #FFA200;
+}
+
+.delivery-notice{
+    max-width:50rem;
+    margin:6rem auto 0;
+    background:#A2D7EC;
+    border-radius:0.625rem;
+    padding:2.5rem 3rem 5rem;
+    box-sizing:border-box;
+}
+
+.delivery-notice h2{
+    margin:0 0 1.5rem;
+    color:white;
+    font-size:2rem;
+    font-family:'Poetsen One',cursive;
+    font-weight:400;
+}
+
+.delivery-notice p{
+    margin:0;
+    color:white;
+    line-height:1.8;
+}
+
+.delivery-highlight{
+    color:white;
+    font-weight:700;
+    text-decoration:underline;
+    text-underline-offset:0.2rem;
+    text-decoration-color:#ff6b6b;
+}
+
+.delivery-form{
+    max-width:42rem;
+    margin:-3rem auto 3rem;
+    padding:2rem;
+    background:white;
+    position:relative;
+    z-index:2;
+    box-shadow:
+    0 0.25rem 0.5rem rgba(0,0,0,0.05);
+}
+
+.delivery-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2rem;
+    margin-bottom:1.75rem;
+}
+
+.delivery-field{
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
+}
+
+.delivery-form > .delivery-field{
+    margin-bottom:1.75rem;
+}
+
+.delivery-field label{
+    color:#000000;
+    font-size:0.9rem;
+}
+
+.delivery-field input{
+    width:100%;
+    box-sizing:border-box;
+    padding:0.875rem;
+    border:0.0625rem solid #EFD468;
+    background:white;
+    font-size:1rem;
+    font-family:'Open Sans',sans-serif;
+}
+
+.delivery-field input:focus{
+    outline:none;
+    border-color:#A2D7EC;
+}
+
+.order-summary{
+    max-width:24rem;
+    margin:0 auto 2rem;
+    background:white;
+    padding:2rem;
+    box-shadow:
+    0 0.25rem 0.5rem rgba(0,0,0,0.05);
+}
+
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:1rem;
+}
+
+.summary-total{
+    display:flex;
+    justify-content:space-between;
+    margin-top:1.5rem;
+    font-size:1.25rem;
+    font-weight:700;
+}
+
+.order-summary hr{
+    margin:1.5rem 0;
+    border:none;
+    border-top:0.0625rem solid #D7EAF3;
+}
+
+.continue-btn{
+    display:block;
+    width:100%;
+    margin:-2.5rem auto 3rem;
+    border:none;
+    border-radius:62.4375rem;
+    max-width:32rem;
+    height:4.75rem;
+    background:#FFA200;
+    color:white;
+    font-size:1.5rem;
+    font-family:'Poetsen One',cursive;
+    cursor:pointer;
+}
+
+.continue-btn:hover{
+    background:#f7c364;
+}
+
+@media (max-width:390px){
+
+    .delivery-notice{
+        margin-top:1.5rem;
+        padding:2rem 1.5rem 4rem;
+    }
+
+    .delivery-notice h2{
+        font-size:1.5rem;
+    }
+
+    .delivery-form{
+        margin:-2rem 1rem 2rem;
+        padding:1.5rem;
+    }
+
+    .delivery-row{
+        grid-template-columns:1fr;
+        gap:1rem;
+    }
+
+    .order-summary{
+        margin:0 1rem 2rem;
+    }
+
+    .continue-btn{
+        height:4rem;
+        font-size:1.5rem;
+    }
+
+}
+
+/*------------------------purchase-----------------------------*/
+
+.purchase-layout{
+    max-width:70rem;
+    margin:2rem auto 3rem;
+    display:grid;
+    grid-template-columns:0.8fr 1.4fr;
+    gap:3rem;
+    align-items:center;
+}
+
+/* order summary */
+
+.purchase-layout .order-summary{
+    margin:1.5rem auto 0;
+    max-width:none;
+    width:100%;
+    height:auto;
+}
+
+.order-summary-bg{
+    background:#D3EE7E;
+    padding:1rem;
+    border-radius:0.625rem;
+    min-height:35rem;
+    margin-top:3rem;
+    display:flex;
+    justify-content:center;
+}
+
+/* payment */
+.payment-wrapper{
+    width:100%;
+    margin-top:3rem;
+}
+
+.payment-notice{
+    background:#A2D7EC;
+    border-radius:0.625rem;
+    padding:2rem 2rem 5rem;
+}
+
+.payment-notice h2{
+    margin:0;
+    color:white;
+    font-size:1.8rem;
+    font-family:'Poetsen One', cursive;
+    font-weight:400;
+}
+
+.payment-form{
+    max-width:28rem;
+    margin:-3rem auto 0;
+    padding:2rem;
+    background:white;
+    position:relative;
+    z-index:2;
+    box-shadow:0 0.25rem 0.5rem rgba(0,0,0,0.05);
+}
+
+.google-pay-option{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:1.5rem;
+    border:0.1875rem solid transparent;
+    border-radius:0.625rem;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.google-pay-option.selected img{
+    border:0.1875rem solid #FFA200;
+    border-radius:0.625rem;
+}
+
+.google-pay-option img{
+    width:100%;
+    max-width:16rem;
+    border-radius:0.625rem;
+}
+
+.payment-divider{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    margin:1.5rem 0;
+}
+
+.payment-divider span{
+    flex:1;
+    height:0.0625rem;
+    background:#A2D7EC;
+}
+
+.payment-divider p{
+    margin:0;
+    color:#3D9BC0;
+    font-size:0.9rem;
+    font-family:'Poetsen One', cursive;
+}
+
+.card-payment{
+    border:0.0625rem solid #A2D7EC;
+    border-radius:0.625rem;
+    padding:1rem;
+}
+
+.card-payment h3{
+    margin:0 0 1rem;
+    font-family:'Poetsen One', cursive;
+    font-weight:400;
+}
+
+.payment-field{
+    display:flex;
+    flex-direction:column;
+    gap:0.4rem;
+    margin-bottom:1rem;
+}
+
+.payment-field label{
+    color:black;
+    font-size:0.8rem;
+}
+
+.payment-field input{
+    width:100%;
+    box-sizing:border-box;
+    padding:0.75rem;
+    border:0.0625rem solid #EFD468;
+    background:white;
+    font-size:1rem;
+    font-family:'Open Sans', sans-serif;
+}
+
+.payment-field input:focus{
+    outline:none;
+    border-color:#A2D7EC;
+}
+
+.payment-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1rem;
+}
+
+/* purchase page button only */
+
+.purchase-btn{
+    display:block;
+    width:100%;
+    max-width:32rem;
+    margin:8rem auto 3rem;
+    border:none;
+    border-radius:62.4375rem;
+    height:4.75rem;
+    background:#FFA200;
+    color:white;
+    font-size:1.5rem;
+    font-family:'Poetsen One', cursive;
+    cursor:pointer;
+}
+
+.purchase-btn:hover{
+    background:#f7c364;
+}
+
+/* remove divider only on purchase page */
+
+.purchase-page hr{
+    display:none;
+}
+
+.purchase-page .cart-divider{
+    display:none;
+}
+@media (max-width:390px){
+
+    .purchase-layout{
+        grid-template-columns:1fr;
+        gap:2rem;
+        margin:1.5rem 1rem 2rem;
+    }
+
+    .order-summary-bg{
+        min-height:auto;
+    }
+
+    .payment-form{
+        margin:-2rem auto 0;
+        padding:1.5rem;
+    }
+
+    .payment-row{
+        grid-template-columns:1fr;
+    }
+
+    .purchase-btn{
+        height:4rem;
+        margin:4rem auto 2rem;
+    }
+
+}
+
+/*---------------------------success--------------------------------------*/
+
+.success-main{
+    max-width:70rem;
+    margin:4rem auto;
+    position:relative;
+    min-height:50rem;
+}
+
+.success-container{
+    position:relative;
+    min-height:50rem;
+}
+
+.success-card{
+    width:32rem;
+    min-height:26rem;
+    margin:0 auto;
+    background:white;
+    box-shadow:0 0.25rem 0.5rem rgba(0,0,0,0.05);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    margin-top: 12rem;
+    z-index:2;
+}
+
+.success-card h1{
+    margin:0 0 1rem;
+    color:#FFC359;
+    font-size:4rem;
+    font-family:'Poetsen One', cursive;
+    font-weight:400;
+}
+
+.success-message{
+    margin:0.5rem 0;
+    color:#A2D7EC;
+    font-size:1rem;
+    font-family:'Poetsen One', cursive;
+}
+
+.delivery-message{
+    margin-top:2rem;
+    color:#777;
+    font-size:1rem;
+    line-height:1.8;
+    text-align:center;
+}
+
+.order-message{
+    margin-top:1rem;
+    color:#999999;
+    font-size:0.9rem;
+    text-align:center;
+}
+
+.circle-orange-large{
+    width:10rem;
+    height:10rem;
+    border-radius:50%;
+    background:#FFC359;
+    position:absolute;
+    left:10%;
+    top:-10%;
+}
+
+.circle-orange-small{
+    width:3rem;
+    height:3rem;
+    border-radius:50%;
+    background:#FFC359;
+    position:absolute;
+    left:30%;
+    top:55%;
+}
+
+.circle-green-large{
+    width:10rem;
+    height:10rem;
+    border-radius:50%;
+    background:#D3EE7E;
+    position:absolute;
+    right:15%;
+    top:55%;
+}
+
+.circle-green-small{
+    width:3rem;
+    height:3rem;
+    border-radius:50%;
+    background:#D3EE7E;
+    position:absolute;
+    left:40%;
+    top:-10%;
+}
+
+.circle-blue-large{
+    width:10rem;
+    height:10rem;
+    border-radius:50%;
+    background:#A2D7EC;
+    position:absolute;
+    right:0;
+    top:25%;
+}
+
+.circle-blue-small{
+    width:6rem;
+    height:6rem;
+    border-radius:50%;
+    background:#A2D7EC;
+    position:absolute;
+    right:20%;
+    top:-15%;
+}
+
+.circle-orange-medium{
+    width:3rem;
+    height:3rem;
+    border-radius:50%;
+    background:#FFC359;
+    position:absolute;
+    right:10%;
+    top:10%;
+}
+
+.circle-green-medium{
+    width:6rem;
+    height:6rem;
+    border-radius:50%;
+    background:#D3EE7E;
+    position:absolute;
+    left:0;
+    top:25%;
+}
+
+/* mobile */
+@media (max-width:390px){
+
+    .success-main{
+        margin:2rem 1rem;
+        min-height:40rem;
+    }
+
+    .success-card{
+        width:16rem;
+        min-height:14rem;
+        padding:2rem;
+        box-sizing:border-box;
+    }
+
+    .success-card h1{
+        font-size:2.5rem;
+    }
+
+    .circle-orange-large,
+    .circle-green-large,
+    .circle-blue-large{
+        width:6rem;
+        height:6rem;
+    }
+
+    .circle-blue-small,
+    .circle-green-medium{
+        width:4rem;
+        height:4rem;
+    }
+
+    .circle-orange-small,
+    .circle-orange-medium,
+    .circle-green-small{
+        width:2rem;
+        height:2rem;
+    }
+
 }

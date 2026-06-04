@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>peninsula_detail</title>
+    <link rel="stylesheet" href="../style/peninsula.css">
+    <script src="../peninsula_js/search_dropdown.js"></script>
+    <script src="../peninsula_js/search.js"></script>
+    <script src="../peninsula_js/detail_product_data.js "></script>
+    <script src="../peninsula_js/detail.js"></script>
+    <script src="../peninsula_js/add_cart.js"></script>
+    <script src="../peninsula_js/cart.js"></script>
+    <script src="../peninsula_js/delivery.js"></script>
+    <script src="../peninsula_js/continuecheckout.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+<body class="cart">
+
+    <!--header-->
+    <header class="header">
+
+        <div class="logo">
+            <img src="../image/logo.png" alt="logo">
+        </div>
+
+        <div class="search-wrapper">
+
+            <!--search bar-->
+            <div class="search-bar" id="searchBar">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text" placeholder="Search" id="searchInput">
+
+                <button id="searchBtn">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+            <!--search dropdown-->
+            <div class="search-dropdown" id="searchDropdown">
+
+                <div class="recent-top">
+
+                    <div class="recent-title">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Recent searches</span>
+                    </div>
+
+                    <i class="fa-regular fa-trash-can clear-icon"></i>
+
+                </div>
+
+                <div class="recent-tags">
+                    <button>Green</button>
+                    <button>Carrot</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--header buttons-->
+        <div class="faq">F.A.Q.S</div>
+
+        <div class="order">
+            <i class="fa-solid fa-receipt"></i>
+            My Order
+        </div>
+
+    </header>
+
+    
+    <main class="cart-main">
+
+        <section class="cart-heading">
+            <a href="cart.html" class="back-btn">
+                <i class="fa-solid fa-chevron-left"></i>
+                Back
+            </a>
+
+            <section class="cart-step">
+                <span>Select —— </span>
+                <span class="step-active">Delivery Info</span>
+                <span> —— Pay</span>
+            </section>
+
+        </section>
+
+        <!--delivery notice-->
+        <section class="delivery-notice">
+
+            <h2>
+                Delivery Information
+                <i class="fa-solid fa-truck-fast"></i>
+            </h2>
+
+            <p>
+                We currently deliver throughout the
+                <span class="delivery-highlight">Mornington Peninsula and surrounding areas</span>
+            </p>
+
+            <p>
+                Deliveries are available on Monday, Wednesday and Friday.
+            </p>
+
+            <p>
+                Please allow 48 hours notice to ensure the freshest products.
+            </p>
+
+        </section>
+
+        <!--delivery form-->
+        <section class="delivery-form">
+
+            <section class="delivery-row">
+
+                <div class="delivery-field">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="First Name">
+                </div>
+
+                <div class="delivery-field">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Last Name">
+                </div>
+
+            </section>
+
+            <div class="delivery-field">
+                <label for="streetAddress">Street Address</label>
+                <input type="text" id="streetAddress" placeholder="Street Address">
+            </div>
+
+            <section class="delivery-row">
+
+                <div class="delivery-field">
+                    <label for="state">State</label>
+                    <input type="text" id="state" placeholder="VIC">
+                </div>
+
+                <div class="delivery-field">
+                    <label for="postcode">Postcode</label>
+                    <input type="text" id="postcode" placeholder="e.g. 3931">
+                </div>
+
+            </section>
+
+            <div class="delivery-field">
+                <label for="suburb">Suburb</label>
+                <input type="text" id="suburb" placeholder="e.g. Mornington">
+            </div>
+
+            <div class="delivery-field">
+                <label for="phone">Contact Number</label>
+                <input type="tel" id="phone" placeholder="e.g. 04xx xxx xxx">
+            </div>
+
+        </section>
+
+        <!--order summary-->
+        <section class="order-summary">
+
+            <h2>Your Order</h2>
+
+            <div class="summary-row">
+                <p>Subtotal</p>
+                <p id="subtotalPrice">$0.00</p>
+            </div>
+
+            <div class="summary-row">
+                <p>Shipping Fee</p>
+                <p>$10.00</p>
+            </div>
+
+            <hr>
+
+            <div class="summary-total">
+                <p>Total</p>
+                <p id="totalPrice">$0.00</p>
+            </div>
+
+        </section>
+
+        <button id="continueBtn" class="continue-btn">
+            Continue To Payment
+        </button>
+
+    </main>
+
+</body>
+</html>
