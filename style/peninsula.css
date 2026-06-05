@@ -194,7 +194,7 @@ body {
     height: 75vh;
     min-height: 37.5rem;
     position: relative;
-    background: url("../image/herofinal.png") center bottom / cover no-repeat;
+    background: url("image/herofinal.png") center bottom / cover no-repeat;
     margin-bottom: 7.5rem;
 }
 
@@ -639,7 +639,7 @@ body {
         height:72vh;
         min-height:33.75rem;
         background:
-        url("../image/heromo.png") center center / cover no-repeat;
+        url("image/heromo.png") center center / cover no-repeat;
         margin-bottom:3.75rem;
     }
 
