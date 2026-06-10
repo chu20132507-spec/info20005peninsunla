@@ -21,6 +21,11 @@ function renderCart(){
 
     //stop if cart is empty
     if (cartItems === null || cartItems === "") {
+         cartContainer.innerHTML =
+        '<div class="empty-cart">' +
+        'Your cart is currently empty.' +
+        '</div>';
+
         renderSubtotal();
         return;
     }
@@ -208,9 +213,7 @@ function renderSubtotal(){
     let cartItems = localStorage.getItem("cartItems");
 
     if (cartItems === null || cartItems === "") {
-
         totalPrice.textContent = "$0.00";
-
         return;
     }
 

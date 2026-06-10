@@ -2,7 +2,10 @@
 window.addEventListener("load", function(){
     localStorage.removeItem("cartItems");
     localStorage.removeItem("checkoutItems");
-    setTimeout(goToCart, 3000);
+    window.addEventListener("load", function(){
+        localStorage.removeItem("cartItems");
+        localStorage.removeItem("checkoutItems");
+    });
 });
 
 //go to cart page

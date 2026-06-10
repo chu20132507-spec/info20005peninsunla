@@ -55,7 +55,12 @@ window.addEventListener("load", function(){
 
             const keyword = searchInput.value.trim();
 
-            window.location.href = "shop.html?search=" + keyword;
+            if(window.location.pathname.includes("index.html")){
+                window.location.href = "docs/shop.html?search=" + keyword;
+            }
+            else{
+                window.location.href = "shop.html?search=" + keyword;
+            }
         });
     }
 

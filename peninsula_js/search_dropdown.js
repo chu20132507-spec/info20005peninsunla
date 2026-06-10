@@ -15,4 +15,18 @@ window.addEventListener("load", function () {
     window.addEventListener("click", function(){
         searchDropdown.classList.remove("active");
     });
+
+    const carrotHistory = document.getElementById("carrotHistory");
+
+    if(carrotHistory){
+        carrotHistory.addEventListener("click", function(){
+            if(window.location.pathname.includes("/docs/")){
+                window.location.href = "shop.html?search=carrot";
+            }
+            else{
+                window.location.href = "docs/shop.html?search=carrot";
+            }
+        });
+    }
+    
 });
